@@ -1,17 +1,5 @@
-// function user(firstname, lastname) {
-//     console.log(firstname + " " + lastname);
-// }
+console.log("Dir Path : " + __dirname);
+//Dir Path : C:\xampp\htdocs\nodejs-practice
 
-// function person(username, fname, lname) {
-//     username(fname, lname);
-// }
-// person(user, "Mahesh", "Ch");
-
-var user = function (firstname, lastname) {
-    console.log(firstname + " " + lastname);
-}
-
-function person(username, fname, lname) {
-    username(fname, lname);
-}
-person(user, "Mahesh", "Ch");
+console.log("File Name : " + __filename);
+//File Name : C:\xampp\htdocs\nodejs-practice\index.js

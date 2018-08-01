@@ -52,3 +52,49 @@
         setTimeout(function() {
             alert('hello');
         }, 1000);
+
+
+## Global Objects and Timers
+
+    $ __dirname
+
+        console.log("Dir Path : " + __dirname);
+            //Dir Path : C:\xampp\htdocs\nodejs-practice
+
+    $ __filename
+
+        console.log("File Name : " + __filename);
+            //File Name : C:\xampp\htdocs\nodejs-practice\index.js
+    
+
+    $ setInterval(callback, delay[, ...args])
+
+
+    $ clearInterval(intervalObject)
+
+
+    $ setTimeout(callback, delay[, ...args])
+
+
+    $ clearTimeout(timeoutObject)
+
+
+    Others
+    ------
+
+        $ Console
+
+        console.log([data][, ...])
+
+        console.info([data][, ...])
+
+        console.error([data][, ...])
+
+        $ exports
+
+            A reference to the "module.exports" that is shorter to type. See the section about the exports shortcut for details on when to use exports and when to use "module.exports".
+
+        $ require()
+
+            To require modules.
+
