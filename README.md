@@ -1,12 +1,13 @@
 ## NodeJs
 
-# How to run nodejs
+## How to run nodejs
 
     - first create js file
     - run "$ node index.js"
 
 
-# Anonymous Function
+## Anonymous Function
+
     Anonymous functions are functions that are dynamically declared at runtime. They’re called anonymous functions because they aren’t given a name in the same way as normal functions.
 
     Ex-1
@@ -42,12 +43,12 @@
         function person(username, fname, lname) {
             username(fname, lname);
         }
-        
+
         person(user, "Mahesh", "Ch");
 
 
-    argument to other functions:
-    ----------------------------
+    #argument to other functions
+
         setTimeout(function() {
             alert('hello');
         }, 1000);
