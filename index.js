@@ -1,8 +1,5 @@
-var user = require('./file1');
+var person = require('./file1');
 
-var fullname = require('./file1')
+person.user();
 
-
-user.userModule();
-
-fullname.fullnameModule("Mahesh", "Chejarla");
+person.fullname("Mahesh", "Chejarla");

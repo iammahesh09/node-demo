@@ -1,12 +1,9 @@
-function user() {
-    console.log("Hello! World")
+module.exports = {
+    user: function () {
+        console.log("Hello! World");
+    },
+
+    fullname: function (fname, lname) {
+        console.log(fname + " " + lname);
+    }
 }
-
-function fullname(fname, lname) {
-    console.log(fname + " " + lname)
-}
-
-
-module.exports.userModule = user;
-
-module.exports.fullnameModule = fullname;
