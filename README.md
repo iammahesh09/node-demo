@@ -250,3 +250,84 @@
 
         //Fire the 'helloEvent' event:
         eventEmitter.emit('helloEvent');
+
+
+
+## Node.js File System (FS)
+
+    The Node.js file system module allows you to work with the file system on your computer.
+    
+    https://www.w3schools.com/nodejs/nodejs_filesystem.asp
+
+    Node File System (fs) module can be imported using following syntax:
+
+        var fs = require("fs")  
+
+    Common use for the File System module:
+
+        - Read files
+        - Create files
+        - Update files
+        - Delete files
+        - Rename files
+
+
+    Read Files
+    ----------
+        The fs.readFile() method is used to read files on your computer.
+
+            # demofile1.html
+
+                <html>
+                    <body>
+                        <h1>My Header</h1>
+                        <p>My paragraph.</p>
+                    </body>
+                </html>
+
+            node
+            ----
+                var http = require('http');
+                var fs = require('fs');
+                http.createServer(function (req, res) {
+                fs.readFile('demofile1.html', function(err, data) {
+                    res.writeHead(200, {'Content-Type': 'text/html'});
+                    res.write(data);
+                    res.end();
+                });
+                }).listen(8080);
+
+
+
+        difference between asynchronous and synchronous
+        ----------------------------------------------
+
+            data.txt            
+            --------
+                Hello Create a Node.js file that reads the HTML file, and return the content:
+
+            app.js
+            ------
+                const file = require('fs');
+
+                file.readFile('data.txt', function (err, data) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log("Asyn is : " + data.toString());
+                    }
+                })
+
+                var sysData = file.readFileSync("data.txt");
+
+                console.log("Sys file : " + sysData.toString());
+                console.log("This is End")
+
+
+        Output
+        -----
+
+        Sys file : Hello Create a Node.js file that reads the HTML file, and return the content:
+
+        This is End
+        Asyn is : Hello Create a Node.js file that reads the HTML file, and return the content:

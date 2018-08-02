@@ -1,5 +1,6 @@
 const http = require('http');
 const event = require('events');
+const file = require('fs');
 
 const eventEmitter = new event.EventEmitter();
 
@@ -25,11 +26,13 @@ eventEmitter.emit('nameEvent', "Mahesh");
 
 
 var anonymousFun = function (req, res) {
-    res.writeHead(200, {
-        "Content-Type": "text/plan"
+    file.readFile('index.html', function (err, data) {
+        res.writeHead(200, {
+            "Content-Type": "text/html"
+        })
+        res.write(data);
+        res.end();
     })
-    res.write("Hello HTTP NodeJS");
-    res.end();
 }
 
 http.createServer(anonymousFun).listen(5000);
