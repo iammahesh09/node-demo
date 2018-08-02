@@ -197,7 +197,7 @@
     Ex-2 - anonymous function
         
         const http = require('http');
-        
+
         var anonymousFun = function (req, res) {
             res.writeHead(200, {
                 "Content-Type": "text/plan"
@@ -207,3 +207,46 @@
         }
 
         http.createServer(anonymousFun).listen(5000);
+
+
+## Events
+    
+    Node.js has a built-in module, called "Events", where you can create-, fire-, and listen for- your own events.
+
+    Ex-1
+        var events = require('events');
+        var eventEmitter = new events.EventEmitter();
+
+        //Create an event handler:
+        var myEventHandler = function () {
+        console.log('I hear a scream!');
+        }
+
+        //Assign the event helloEvent to an event:
+        eventEmitter.on('helloEvent', myEventHandler);
+
+        //Fire the 'helloEvent' event:
+        eventEmitter.emit('helloEvent');
+
+
+    Ex-2
+
+        const event = require('events');
+
+        const eventEmitter = new event.EventEmitter();
+
+        //Create an event handler:
+        var myEventHandler = function () {
+            console.log('I hear a scream!');
+        }
+        var anonymousEventHandler = function (name) {
+            console.log(name);
+        }
+
+        //Assign the event helloEvent to an event:
+        eventEmitter.on('helloEvent', myEventHandler);
+
+        eventEmitter.on('nameEvent', anonymousEventHandler);
+
+        //Fire the 'helloEvent' event:
+        eventEmitter.emit('helloEvent');
