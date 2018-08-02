@@ -111,3 +111,64 @@
         setTimeout(callbackFun, 3000);
         console.log("node 3");
         console.log("node 4");
+
+
+## Modules
+
+    Module in Node.js is a simple or complex functionality organized in single or multiple JavaScript files which can be reused throughout the Node.js application.
+
+    Node.js includes three types of modules:
+
+       - Core Modules
+       - Local Modules
+       - Third Party Modules
+
+    # Node.js Core Modules
+
+        Node.js is a light weight framework. The core modules include bare minimum functionalities of Node.js. These core modules are compiled into its binary distribution and load automatically when Node.js process starts. However, you need to import the core module first in order to use it in your application.
+
+ 
+        Core Module	Description
+            http    -	http module includes classes, methods and events to create Node.js http server.
+
+            url     -   url module includes methods for URL resolution and parsing.
+
+            querystring -	querystring module includes methods to deal with query string.
+
+            path    -   path module includes methods to deal with file paths.
+
+            fs      -   fs module includes classes, methods, and events to work with file I/O.
+
+            util    -	util module includes utility functions useful for programmers.
+
+
+            #Loading Core Modules
+
+            In order to use Node.js core or NPM modules, you first need to import it using require() function as shown below.
+
+                var module = require('module_name');
+
+            As per above syntax, specify the module name in the require() function. The require() function will return an object, function, property or any other JavaScript type, depending on what the specified module returns.
+
+            The following example demonstrates how to use Node.js http module to create a web server.
+
+            Example: 
+                
+                Load and Use Core http Module
+
+                var http = require('http');
+
+                var server = http.createServer(function(req, res){
+
+                //write code here
+
+                });
+
+                server.listen(5000); 
+
+
+                In the above example, require() function returns an object because http module returns its functionality as an object, you can then use its properties and methods using dot notation e.g. http.createServer().
+
+                In this way, you can load and use Node.js core modules in your application. We will be using core modules throughout these tutorials.
+
+                Learn about local modules in the next section.
