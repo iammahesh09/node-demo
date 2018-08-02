@@ -1,9 +1,12 @@
 const http = require('http');
 
-http.createServer(function (req, res) {
+
+var anonymousFun = function (req, res) {
     res.writeHead(200, {
         "Content-Type": "text/plan"
     })
-    res.write("Hello NodeJS");
+    res.write("Hello HTTP NodeJS");
     res.end();
-}).listen(5000);
+}
+
+http.createServer(anonymousFun).listen(5000);
