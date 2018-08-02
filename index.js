@@ -1,5 +1,9 @@
-console.log("Dir Path : " + __dirname);
-//Dir Path : C:\xampp\htdocs\nodejs-practice
+console.log("node 1");
+console.log("node 2");
 
-console.log("File Name : " + __filename);
-//File Name : C:\xampp\htdocs\nodejs-practice\index.js
+function callbackFun() {
+    console.log("callback functon nodejs")
+}
+setTimeout(callbackFun, 3000);
+console.log("node 3");
+console.log("node 4");

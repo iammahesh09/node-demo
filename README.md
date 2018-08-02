@@ -98,3 +98,16 @@
 
             To require modules.
 
+## Callback functions
+
+    A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+        console.log("node 1");
+        console.log("node 2");
+
+        function callbackFun() {
+            console.log("callback functon nodejs")
+        }
+        setTimeout(callbackFun, 3000);
+        console.log("node 3");
+        console.log("node 4");
