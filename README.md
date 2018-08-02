@@ -172,3 +172,22 @@
                 In this way, you can load and use Node.js core modules in your application. We will be using core modules throughout these tutorials.
 
                 Learn about local modules in the next section.
+
+
+## HTTP Module
+
+    http module includes classes, methods and events to create Node.js http server.
+
+        https://nodejs.org/api/http.html
+
+        const http = require('http');
+
+        http.createServer(function (req, res) {
+            res.writeHead(200, {
+                "Content-Type": "text/plan"
+            })
+            res.write("Hello NodeJS");
+            res.end();
+        }).listen(5000);
+
+        

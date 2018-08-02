@@ -1,5 +1,9 @@
-var person = require('./file1');
+const http = require('http');
 
-person.user();
-
-person.fullname("Mahesh", "Chejarla");
+http.createServer(function (req, res) {
+    res.writeHead(200, {
+        "Content-Type": "text/plan"
+    })
+    res.write("Hello NodeJS");
+    res.end();
+}).listen(5000);
